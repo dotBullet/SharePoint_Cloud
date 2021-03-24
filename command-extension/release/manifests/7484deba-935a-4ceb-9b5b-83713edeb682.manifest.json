@@ -1,0 +1,52 @@
+{
+  "id": "7484deba-935a-4ceb-9b5b-83713edeb682",
+  "alias": "HelloWorldCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "items": {
+    "COMMAND_1": {
+      "title": {
+        "default": "Command One"
+      },
+      "iconImageUrl": "icons/request.png",
+      "type": "command"
+    },
+    "COMMAND_2": {
+      "title": {
+        "default": "Command Two"
+      },
+      "iconImageUrl": "icons/cancel.png",
+      "type": "command"
+    }
+  },
+  "loaderConfig": {
+    "internalModuleBaseUrls": [
+      "<!-- PATH TO CDN -->"
+    ],
+    "entryModuleId": "hello-world-command-set",
+    "scriptResources": {
+      "hello-world-command-set": {
+        "type": "path",
+        "path": "hello-world-command-set_c9a63c23cd8138ea0e61.js"
+      },
+      "@microsoft/sp-listview-extensibility": {
+        "type": "component",
+        "id": "d37b65ee-c7d8-4570-bc74-2b294ff3b380",
+        "version": "1.12.0"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b",
+        "version": "1.12.0"
+      },
+      "@microsoft/decorators": {
+        "type": "component",
+        "id": "f97266fb-ccb7-430e-9384-4124d05295d3",
+        "version": "1.12.0"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://licenta2020mta.sharepoint.com/sites/Dev-site/Testx2/Forms/AllItems.aspx?viewpath=%2Fsites%2FDev-site%2FTestx2%2FForms%2FAllItems.aspx",
+      "customActions": {
+        "7484deba-935a-4ceb-9b5b-83713edeb682": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    },
+    "helloWorld": {
+      "pageUrl": "https://licenta2020mta.sharepoint.com/sites/Dev-site/Testx2/Forms/AllItems.aspx?viewpath=%2Fsites%2FDev-site%2FTestx2%2FForms%2FAllItems.aspx",
+      "customActions": {
+        "7484deba-935a-4ceb-9b5b-83713edeb682": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    }
+  }
+}
