@@ -30,7 +30,7 @@
     "scriptResources": {
       "hello-world-command-set": {
         "type": "path",
-        "path": "hello-world-command-set_c9a63c23cd8138ea0e61.js"
+        "path": "hello-world-command-set_7e640281c9091169c544.js"
       },
       "@microsoft/sp-listview-extensibility": {
         "type": "component",

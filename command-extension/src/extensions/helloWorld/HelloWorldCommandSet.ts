@@ -7,11 +7,9 @@ import {
   IListViewCommandSetExecuteEventParameters
 } from '@microsoft/sp-listview-extensibility';
 import { Dialog } from '@microsoft/sp-dialog';
-import axios from 'axios';
-import * as express from 'express';
 
 import * as strings from 'HelloWorldCommandSetStrings';
-import qs from 'qs';
+
 /**
  * If your command set uses the ClientSideComponentProperties JSON input,
  * it will be deserialized into the BaseExtension.properties object.
@@ -20,11 +18,10 @@ import qs from 'qs';
 export interface IHelloWorldCommandSetProperties {
   // This is an example; replace with your own properties
   sampleTextOne: string;
-
+  sampleTextTwo: string;
 }
 
 const LOG_SOURCE: string = 'HelloWorldCommandSet';
-
 
 export default class HelloWorldCommandSet extends BaseListViewCommandSet<IHelloWorldCommandSetProperties> {
 
@@ -43,26 +40,27 @@ export default class HelloWorldCommandSet extends BaseListViewCommandSet<IHelloW
     }
   }
 
+
+
   @override
   public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
     switch (event.itemId) {
       case 'COMMAND_1':
-        //Dialog.alert(`${this.properties.sampleTextOne}`);
+        // Dialog.alert(`${this.properties.sampleTextOne}`);
+        const axios = require("axios");
+        window.location.href = 'https://msign-test.transsped.ro/csc/v0/oauth2/authorize?response_type=code&client_id=msdiverse&redirect_uri=http://localhost:8080/&scope=service';
 
-        const url: string = 'https://msign-test.transsped.ro/csc/v0/oauth2/authorize?response_type=code&client_id=msdiverse&redirect_uri=http://localhost:8080&scope=service';
-        const axios = require('axios');
-        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-        
-        //window.location.href = 'https://msign-test.transsped.ro/csc/v0/oauth2/authorize?response_type=code&client_id=msdiverse&redirect_uri=http://localhost:8080&scope=service';
-
-        try{
-        } catch (exception){
+        try {
+        } catch (exception) {
           console.log(exception);
         }
         break;
-      
-        default:
+
+
+      default:
         throw new Error('Unknown command');
     }
+
   }
+
 }
